@@ -1,0 +1,103 @@
+2024-09-10 18:17:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STANZE" not found; SQL statement:
+SELECT * FROM stanze; [42102-200]
+2024-09-10 18:17:01 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Unknown data type: ; SQL statement:
+CREATE TABLE stanze (id int, nome varchar(255), descrizione varchar(255), setLook varchar(500), hideDescription(255)); [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:164)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at com.mycompany.adventure.Adventure.newDB(Adventure.java:343)
+	at com.mycompany.adventure.Adventure.tryConnection(Adventure.java:323)
+	at com.mycompany.adventure.Adventure.init(Adventure.java:27)
+	at com.mycompany.game.Engine.<init>(Engine.java:24)
+	at com.mycompany.game.Engine.main(Engine.java:79)
+2024-09-10 18:17:01 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMANDI" not found; SQL statement:
+SELECT * FROM comandi; [42102-200]
+2024-09-10 18:17:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STANZE" not found; SQL statement:
+SELECT * FROM stanze; [42102-200]
+2024-09-10 18:17:48 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "DESCRZIONE" not found; SQL statement:
+INSERT INTO stanze (id, nome, descrzione, setlook) VALUES ('1', 'Atrio', 'In questa stanza vedo solo una statua a forma di P e li vicino il mio martello. Dovrei raccoglierlo', 'a NORD balcone, a EST cortile, a SUD ingresso e ad OVEST biblioteca');INSERT INTO stanze (id, nome, descrizione) VALUES ('2', 'Ingresso', 'Il luogo dello scontro con il fantasma');INSERT INTO stanze (id, nome, descrzione, setlook) VALUES ('3', 'Balcone', 'Il posto panoramico del castello! Per fortuna vi è una sedia per ammirare il panorama. Sulla sedia vedo una chiave. Dovrei raccoglierla.', 'a SUD ingresso');INSERT INTO stanze (id, nome, descrzione, setlook, hideDescription) VALUES ('4', 'Biblioteca', 'Oltre ai libri, vedo una poltrona con accanto un tavolino su cui e posata una chiave. Dovrei raccoglierla.', 'a EST atrio, ad OVEST camera da letto', 'Una stanza molto buia: forse ho qualcosa con cui illuminare la stanza');INSERT INTO stanze (id, nome, descrzione, setlook) VALUES ('5', 'Camera da letto', 'Oltre al letto, vedo un pulsante accanto ad una porta, chissà a cosa serve...', 'a EST biblioteca');INSERT INTO stanze (id, nome, descrzione, setlook) VALUES ('6', 'Cortile', 'Perche al centro del cortile ci sta un blocco con un punto esclamativo sopra? Per il mio martello sarà un gioco da ragazzi!', 'a OVEST atrio') [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:164)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at com.mycompany.adventure.Adventure.newDB(Adventure.java:344)
+	at com.mycompany.adventure.Adventure.tryConnection(Adventure.java:323)
+	at com.mycompany.adventure.Adventure.init(Adventure.java:27)
+	at com.mycompany.game.Engine.<init>(Engine.java:24)
+	at com.mycompany.game.Engine.main(Engine.java:79)
+2024-09-10 18:17:48 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMANDI" not found; SQL statement:
+SELECT * FROM comandi; [42102-200]
+2024-09-10 18:18:21 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMANDI" not found; SQL statement:
+SELECT * FROM comandi; [42102-200]
+2024-09-10 18:19:28 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMANDI" not found; SQL statement:
+SELECT * FROM comandi; [42102-200]
+2024-09-10 18:20:38 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMANDI" not found; SQL statement:
+SELECT * FROM comandi; [42102-200]
+2024-09-10 18:22:19 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMANDI" not found; SQL statement:
+SELECT * FROM comandi; [42102-200]
+2024-09-10 18:22:56 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMANDI" not found; SQL statement:
+SELECT * FROM comandi; [42102-200]
+2024-09-10 18:24:07 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMANDI" not found; SQL statement:
+SELECT * FROM comandi; [42102-200]
+2024-09-10 18:26:52 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMANDI" not found; SQL statement:
+SELECT * FROM comandi; [42102-200]
+2024-09-10 18:31:12 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMANDI" not found; SQL statement:
+SELECT * FROM comandi; [42102-200]
+2024-09-10 18:57:54 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "COMANDI" not found; SQL statement:
+SELECT * FROM comandi; [42102-200]
+2024-09-10 19:05:54 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STANZE" already exists; SQL statement:
+CREATE TABLE stanze (id int, nome varchar(255), descrizione varchar(255), setLook varchar(500), hideDescription varchar(255)); [42101-200]
+2024-09-10 19:11:55 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STANZE" already exists; SQL statement:
+CREATE TABLE stanze (id int, nome varchar(255), descrizione varchar(255), setLook varchar(500), hideDescription varchar(255)); [42101-200]
+2024-09-10 19:12:38 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STANZE" already exists; SQL statement:
+CREATE TABLE stanze (id int, nome varchar(255), descrizione varchar(255), setLook varchar(500), hideDescription varchar(255)); [42101-200]
+2024-09-10 19:16:04 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STANZE" already exists; SQL statement:
+CREATE TABLE stanze (id int, nome varchar(255), descrizione varchar(255), setLook varchar(500), hideDescription varchar(255)); [42101-200]

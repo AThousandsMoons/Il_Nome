@@ -1,0 +1,8 @@
+2024-09-12 20:52:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STANZE" not found; SQL statement:
+SELECT * FROM stanze; [42102-200]
+2024-09-12 20:53:46 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-200]
+2024-09-12 20:54:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STANZE" not found; SQL statement:
+SELECT * FROM stanze; [42102-200]

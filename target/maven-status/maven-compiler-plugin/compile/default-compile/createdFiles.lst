@@ -1,0 +1,13 @@
+com\mycompany\elements\CommandType.class
+com\mycompany\game\Engine.class
+com\mycompany\game\GameBasics.class
+com\mycompany\elements\ObjectProperty.class
+com\mycompany\parser\Parser.class
+com\mycompany\adventure\Adventure$1.class
+com\mycompany\elements\Timer.class
+com\mycompany\elements\Inventory.class
+com\mycompany\adventure\Dialoghi.class
+com\mycompany\elements\Room.class
+com\mycompany\adventure\Adventure.class
+com\mycompany\parser\ParserOutput.class
+com\mycompany\elements\Command.class
